@@ -21,10 +21,10 @@ robots.txt · sitemap.xml · assets/fotos/
 
 ## Antes de publicar
 1. **Fotos**: já inseridas em `assets/fotos/` — `sueli-hero.jpg` (hero),
-   `sueli-sobre.jpg` (sobre) e `sueli-ig-1.jpg` (tile do Instagram).
+   `sueli-sobre.jpg` (sobre) e `sueli-ig.jpg` (card de conteúdo/Instagram).
    Para trocar, basta substituir os arquivos mantendo os nomes.
-2. **WhatsApp**: em `js/main.js`, trocar `WHATSAPP_NUMBER = "55XXXXXXXXXXX"`
-   pelo número real — todos os CTAs `[data-wa]` passam a apontar ao wa.me.
+2. **WhatsApp**: número real já configurado em `js/main.js` (5521964565206) —
+   todos os CTAs `[data-wa]` apontam ao wa.me.
 3. **Domínio**: ajustar `sueliboni.com.br` no canonical/OG/sitemap se diferente.
 4. **Sobre**: o texto atual é evocativo e seguro; complementar com trajetória,
    formação e especializações reais quando fornecidas.

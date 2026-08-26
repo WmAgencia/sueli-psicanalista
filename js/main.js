@@ -2,8 +2,8 @@
    Sueli Boni — Interações
    ════════════════════════════════════════ */
 
-/* CONFIGURAÇÃO — substituir pelo número real (formato: 55 + DDD + número) */
-const WHATSAPP_NUMBER = "55XXXXXXXXXXX";
+/* CONFIGURAÇÃO — número real do WhatsApp (55 + DDD + número) */
+const WHATSAPP_NUMBER = "5521964565206";
 const WA_MESSAGE = "Olá, Sueli! Conheci seu trabalho pelo site e gostaria de conversar.";
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

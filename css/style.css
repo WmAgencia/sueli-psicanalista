@@ -219,6 +219,7 @@ p + p { margin-top:1.15em; }
 /* Arte do hero */
 .hero-art { position:relative; }
 .hero-art__frame {
+  width:100%;
   aspect-ratio:4/5; max-width:480px; margin-left:auto;
   background:linear-gradient(168deg, var(--pine-2), var(--pine) 58%, #101B15);
   border-radius:240px 240px 22px 22px;
@@ -241,25 +242,6 @@ p + p { margin-top:1.15em; }
 .sparkle { transform-box:fill-box; transform-origin:center; animation:pulse 5s ease-in-out infinite; }
 @keyframes spin { to { transform:rotate(360deg); } }
 @keyframes pulse { 0%,100% { opacity:.9; } 50% { opacity:.4; } }
-
-/* Selo giratório */
-.stamp {
-  position:absolute; left:-14px; bottom:26px;
-  width:clamp(104px, 12vw, 138px); aspect-ratio:1;
-  background:var(--ivory);
-  border-radius:50%;
-  filter:drop-shadow(0 14px 26px rgba(19,32,25,.28));
-}
-.stamp::after {
-  content:""; position:absolute; inset:7px; border-radius:50%;
-  border:1px solid color-mix(in srgb, var(--brass) 55%, transparent);
-  pointer-events:none;
-}
-.stamp svg { width:100%; height:100%; animation:spin 22s linear infinite; }
-.stamp__text {
-  font-family:var(--sans); font-size:9.5px; font-weight:600;
-  letter-spacing:1.8px; fill:var(--pine); text-transform:uppercase;
-}
 
 /* Indicador de rolagem */
 .hero__scroll {
@@ -511,30 +493,37 @@ p + p { margin-top:1.15em; }
 }
 .faq-item.is-open .faq-item__a { grid-template-rows:1fr; }
 
-/* ══════════ INSTAGRAM ══════════ */
+/* ══════════ INSTAGRAM / CONTEÚDOS ══════════ */
 .instagram { background:var(--cream); }
-.instagram > .container > * + * { margin-top:1.4rem; }
-.instagram > .container > .btn { margin-top:2.4rem; }
-.ig-grid {
-  display:grid; grid-template-columns:repeat(3, minmax(0, 190px));
-  gap:1.2rem; justify-content:center; margin-block:2.4rem .4rem;
+.ig__grid {
+  display:grid; grid-template-columns:.92fr 1.08fr;
+  gap:clamp(2.5rem, 6vw, 5rem); align-items:center;
 }
-.ig-grid span, .ig-grid img {
-  aspect-ratio:1; border-radius:18px; display:block; position:relative; overflow:hidden;
-  transition:transform .55s var(--ease), box-shadow .55s var(--ease);
+.ig__media { margin:0; }
+.ig-card {
+  position:relative; max-width:440px;
+  aspect-ratio:1/1; border-radius:26px; overflow:hidden;
+  box-shadow:0 36px 70px -32px rgba(19,32,25,.5);
 }
-.ig-grid img { object-fit:cover; width:100%; height:100%; }
-.ig-grid span {
-  background:linear-gradient(150deg, var(--pine-2), var(--pine));
+.ig-card::after {
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, transparent 58%, rgba(19,32,25,.34));
+  pointer-events:none;
 }
-.ig-grid span::before {
-  content:"✳"; position:absolute; inset:0; display:grid; place-items:center;
-  font-size:2.2rem; color:rgba(244,238,226,.35);
-  transition:color .5s var(--ease), transform .7s var(--ease);
+.ig-card img {
+  width:100%; height:100%;
+  object-fit:cover; object-position:center 22%;
 }
-.ig-grid span:last-child::before { content:"❋"; }
-.ig-grid:hover span, .ig-grid:hover img { transform:translateY(-6px); box-shadow:0 24px 44px -22px rgba(19,32,25,.4); }
-.ig-grid:hover span::before { color:var(--ivory); transform:rotate(90deg) scale(1.1); }
+.ig-card__handle {
+  position:absolute; left:1.15rem; bottom:1.15rem; z-index:1;
+  background:color-mix(in srgb, var(--pine) 55%, transparent);
+  backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+  color:var(--ivory);
+  padding:.55em 1.2em; border-radius:999px;
+  font-size:.74rem; font-weight:600; letter-spacing:.12em;
+}
+.ig__content h2 { max-width:20ch; margin-bottom:1.5rem; }
+.ig__content p { color:var(--muted); max-width:46ch; margin-bottom:2.6rem; }
 
 /* ══════════ CTA FINAL ══════════ */
 .final {
@@ -629,11 +618,11 @@ p + p { margin-top:1.15em; }
 }
 
 @media (max-width: 940px) {
-  .hero__grid, .about__grid, .faq__grid { grid-template-columns:1fr; }
-  .hero__media { order:-1; max-width:430px; }
+  .hero__grid, .about__grid, .faq__grid, .ig__grid { grid-template-columns:1fr; }
+  .hero__media { order:-1; width:100%; max-width:430px; margin-inline:auto; }
   .hero-art__frame { margin-inline:auto; }
-  .stamp { left:6px; }
   .about-art { max-width:420px; }
+  .ig-card { margin-inline:auto; max-width:400px; }
   .identify__cols { grid-template-columns:1fr; }
   .pillars__grid { grid-template-columns:1fr; max-width:560px; }
   .faq__intro { position:static; }
@@ -670,7 +659,8 @@ p + p { margin-top:1.15em; }
   .step { grid-template-columns:1fr; gap:.8rem; }
   .step::before { display:none; }
 
-  .ig-grid { grid-template-columns:repeat(3, 1fr); width:min(100%, 360px); margin-inline:auto; }
+  .ig__media { order:-1; }
+  .ig-card { max-width:340px; }
   .footer__bottom { flex-direction:column; gap:.4rem; }
 }
 
