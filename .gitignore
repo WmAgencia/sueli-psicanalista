@@ -1,1 +1,2 @@
 .vercel
+.env.local\n.env*.local\nREPORT.md\n*.zip

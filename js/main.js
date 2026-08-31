@@ -374,6 +374,17 @@
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
+  /* ── Service Worker (PWA) ── */
+  function initServiceWorker() {
+    if (!("serviceWorker" in navigator)) return;
+    if (location.protocol === "file:") return;
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .catch(() => {});
+    });
+  }
+
   /* ── Inicialização ── */
   function init() {
     initLoader();
@@ -390,6 +401,7 @@
     initTilt();
     initSmoothScroll();
     setYear();
+    initServiceWorker();
   }
 
   if (document.readyState === "loading") {

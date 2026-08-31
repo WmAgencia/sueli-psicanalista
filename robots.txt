@@ -1,3 +1,22 @@
 User-agent: *
 Allow: /
+Disallow: /404.html
+
+# Crawl-delay para todos
+Crawl-delay: 0
+
+# Sitemap
 Sitemap: https://sueliboni.com.br/sitemap.xml
+
+# Bots específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /

@@ -1,0 +1,33 @@
+{
+  "name": "Sueli Boni — Psicanalista · Auriculoterapeuta",
+  "short_name": "Sueli Boni",
+  "description": "Espaço de escuta profunda para mulheres que decidem olhar para si com profundidade. Psicanálise clínica, escuta clínica e auriculoterapia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF6ED",
+  "theme_color": "#0E1812",
+  "lang": "pt-BR",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/fotos/sueli-ig.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/fotos/sueli-hero.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "lifestyle", "medical"],
+  "shortcuts": [
+    {
+      "name": "Agendar pelo WhatsApp",
+      "url": "https://wa.me/5521964565206?text=Ol%C3%A1%2C%20Sueli!%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20conversar.",
+      "icons": [{ "src": "/assets/fotos/sueli-ig.jpg", "sizes": "192x192" }]
+    }
+  ]
+}
