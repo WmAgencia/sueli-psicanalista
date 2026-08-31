@@ -3,34 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sueli Boni | Psicanalista, Mentora e Terapeuta das Emoções</title>
-  <meta name="description" content="Sueli Boni — psicanalista, mentora e terapeuta das emoções. Um espaço de escuta profunda dedicado a mulheres que desejam compreender suas emoções e transformar a relação consigo mesmas.">
+  <title>Sueli Boni | Psicanalista · Mentora · Terapeuta das Emoções</title>
+  <meta name="description" content="Sueli Boni — psicanalista, mentora e terapeuta das emoções. Um espaço de escuta profunda para mulheres que decidem olhar para si com profundidade e transformar a relação consigo mesmas.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#132019">
+  <meta name="theme-color" content="#0E1812">
+  <meta name="author" content="Sueli Boni">
   <link rel="canonical" href="https://sueliboni.com.br/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://sueliboni.com.br/">
-  <meta property="og:title" content="Sueli Boni | Psicanalista, Mentora e Terapeuta das Emoções">
+  <meta property="og:title" content="Sueli Boni | Psicanalista · Mentora · Terapeuta das Emoções">
   <meta property="og:description" content="O processo de transformação começa quando você decide olhar para si com profundidade.">
   <meta property="og:image" content="https://sueliboni.com.br/assets/fotos/sueli-hero.jpg">
+  <meta property="og:site_name" content="Sueli Boni">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sueli Boni | Psicanalista, Mentora e Terapeuta das Emoções">
+  <meta name="twitter:title" content="Sueli Boni | Psicanalista · Mentora · Terapeuta das Emoções">
   <meta name="twitter:description" content="O processo de transformação começa quando você decide olhar para si com profundidade.">
+  <meta name="twitter:image" content="https://sueliboni.com.br/assets/fotos/sueli-hero.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23132019'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' fill='%23F4EEE2' text-anchor='middle'%3ESB%3C/text%3E%3C/svg%3E">
+  <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230E1812'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='24' fill='%23D4A574' text-anchor='middle'%3ESB%3C/text%3E%3C/svg%3E">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Barra de progresso de leitura -->
+  <!-- Loader premium -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__mark">SB</span>
+      <span class="loader__line"></span>
+    </div>
+  </div>
+
+  <!-- Cursor custom -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- Barra de progresso -->
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
   <!-- ══════════ HEADER ══════════ -->
@@ -38,10 +59,14 @@
     <div class="container header__inner">
       <a href="#topo" class="brand" aria-label="Sueli Boni — início">
         <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22.5" stroke="currentColor" stroke-width="1.2"/><path d="M24 13l2.8 8.2L35 24l-8.2 2.8L24 35l-2.8-8.2L13 24l8.2-2.8z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M24 13l2.8 8.2L35 24l-8.2 2.8L24 35l-2.8-8.2L13 24l8.2-2.8z" fill="currentColor"/>
+          </svg>
         </span>
         <span class="brand__name">Sueli&nbsp;Boni</span>
       </a>
+
       <nav class="nav" id="nav" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
         <a href="#atuacao">Atuação</a>
@@ -50,7 +75,12 @@
         <a href="#conteudos">Conteúdos</a>
         <a href="#contato">Contato</a>
       </nav>
-      <a class="btn btn--primary btn--small header__cta" data-wa href="#contato" rel="noopener">Agendar conversa</a>
+
+      <a class="btn btn--primary btn--small header__cta" data-wa href="#contato" rel="noopener">
+        <span>Agendar</span>
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+
       <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
@@ -59,27 +89,68 @@
 
   <main>
 
-    <!-- ══════════ HERO ══════════ -->
+    <!-- ══════════ HERO �═════════ -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__grid-pattern"></div>
+      </div>
+
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="eyebrow reveal"><span class="eyebrow__line" aria-hidden="true"></span>Psicanalista · Mentora · Terapeuta das Emoções</p>
-          <h1 class="hero__name reveal" id="hero-title">Sueli<br>Boni</h1>
-          <p class="hero__statement reveal">O inconsciente fala.<br><em>Aqui você aprende a escutar.</em></p>
-          <p class="hero__desc reveal">Um espaço de escuta profunda dedicado a mulheres que desejam compreender suas emoções, revisitar a própria história e construir uma relação mais verdadeira consigo mesmas.</p>
-          <div class="hero__actions reveal">
-            <a class="btn btn--primary" data-wa href="#contato" rel="noopener">Agendar uma conversa<span class="btn__arrow" aria-hidden="true">→</span></a>
-            <a class="btn btn--ghost" href="#atuacao">Conhecer a abordagem</a>
+          <div class="hero__badge reveal">
+            <span class="hero__badge-dot"></span>
+            <span>Psicanalista · Mentora · Terapeuta das Emoções</span>
           </div>
-          <p class="hero__hint reveal">Atendimento acolhedor, confidencial e no seu ritmo.</p>
+
+          <h1 class="hero__name reveal" id="hero-title">
+            <span class="hero__name-line">Sueli</span>
+            <span class="hero__name-line hero__name-line--accent">Boni</span>
+          </h1>
+
+          <p class="hero__statement reveal">
+            <span class="hero__statement-line">O inconsciente fala.</span>
+            <span class="hero__statement-line hero__statement-line--italic">Aqui você aprende a escutar.</span>
+          </p>
+
+          <p class="hero__desc reveal">
+            Um espaço de escuta profunda dedicado a mulheres que desejam compreender suas emoções, revisitar a própria história e construir uma relação mais verdadeira consigo mesmas.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" data-wa href="#contato" rel="noopener">
+              <span>Agendar uma conversa</span>
+              <svg class="btn__arrow" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#atuacao">
+              <span>Conhecer a abordagem</span>
+            </a>
+          </div>
+
+          <div class="hero__trust reveal">
+            <div class="hero__trust-item">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2 4.5 4.8.5-3.6 3.3 1 4.7L8 11.7l-4.2 2.3 1-4.7L1.2 6l4.8-.5z"/></svg>
+              <span>Atendimento acolhedor</span>
+            </div>
+            <div class="hero__trust-item">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2 4.5 4.8.5-3.6 3.3 1 4.7L8 11.7l-4.2 2.3 1-4.7L1.2 6l4.8-.5z"/></svg>
+              <span>Confidencial</span>
+            </div>
+            <div class="hero__trust-item">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 1l2 4.5 4.8.5-3.6 3.3 1 4.7L8 11.7l-4.2 2.3 1-4.7L1.2 6l4.8-.5z"/></svg>
+              <span>No seu ritmo</span>
+            </div>
+          </div>
         </div>
 
         <figure class="hero__media reveal reveal--delay">
           <div class="hero-art" id="heroArt">
             <div class="hero-art__frame">
               <img class="hero-art__img" src="assets/fotos/sueli-hero.jpg" alt="Retrato profissional de Sueli Boni" width="1000" height="1792" fetchpriority="high">
+
               <svg class="hero-art__rings" viewBox="0 0 400 520" role="presentation" aria-hidden="true">
-                <g class="rings-slow" fill="none" stroke="#C79A63" stroke-width="1">
+                <g class="rings-slow" fill="none" stroke="#D4A574" stroke-width="1">
                   <circle cx="200" cy="330" r="52"/>
                   <circle cx="196" cy="338" r="88" opacity=".8"/>
                   <circle cx="204" cy="322" r="126" opacity=".6"/>
@@ -89,31 +160,57 @@
                 <g class="rings-dash" fill="none" stroke="#F4EEE2" stroke-width=".8" opacity=".4">
                   <circle cx="200" cy="330" r="106" stroke-dasharray="2 7"/>
                 </g>
-                <path class="sparkle" d="M292 128l4.5 15 15 4.5-15 4.5-4.5 15-4.5-15-15-4.5 15-4.5z" fill="#C79A63"/>
-                <circle cx="118" cy="150" r="3" fill="#C79A63"/>
               </svg>
+
+              <div class="hero-art__badges">
+                <span class="hero-art__badge hero-art__badge--1">
+                  <span class="hero-art__badge-dot"></span>
+                  Escuta profunda
+                </span>
+                <span class="hero-art__badge hero-art__badge--2">
+                  <span class="hero-art__badge-dot"></span>
+                  Sigilo absoluto
+                </span>
+                <span class="hero-art__badge hero-art__badge--3">
+                  <span class="hero-art__badge-dot"></span>
+                  Online
+                </span>
+              </div>
+
+              <div class="hero-art__sparkles" aria-hidden="true">
+                <span class="sparkle sparkle--1">✦</span>
+                <span class="sparkle sparkle--2">✧</span>
+                <span class="sparkle sparkle--3">✦</span>
+              </div>
             </div>
-            <!-- Selo giratório removido -->
           </div>
-          <figcaption class="sr-only">Sueli Boni, psicanalista</figcaption>
         </figure>
       </div>
-      <div class="hero__scroll" aria-hidden="true"><span>role para explorar</span><i></i></div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>role para explorar</span>
+        <i></i>
+      </div>
     </section>
 
     <!-- ══════════ MARQUEE ══════════ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>Escuta profunda <b>✳</b> Autoconhecimento <b>✳</b> Vida emocional <b>✳</b> Transformação <b>✳</b> Memória <b>✳</b> Presença <b>✳</b> </span>
-        <span>Escuta profunda <b>✳</b> Autoconhecimento <b>✳</b> Vida emocional <b>✳</b> Transformação <b>✳</b> Memória <b>✳</b> Presença <b>✳</b> </span>
+        <span>Escuta profunda <b>✳</b> Autoconhecimento <b>✳</b> Vida emocional <b>�</b> Transformação <b>✳</b> Memória <b>�</b> Presença <b>✳</b></span>
+        <span>Escuta profunda <b>✳</b> Autoconhecimento <b>✳</b> Vida emocional <b>✳</b> Transformação <b>✳</b> Memória <b>✳</b> Presença <b>✳</b></span>
       </div>
     </div>
 
     <!-- ══════════ IDENTIFICAÇÃO ══════════ -->
     <section class="identify section" aria-labelledby="identify-title">
       <div class="container container--narrow">
-        <p class="section-tag reveal">O ponto de partida</p>
-        <h2 class="display reveal" id="identify-title">Você não precisa continuar carregando tudo sozinha.</h2>
+        <p class="section-tag reveal">
+          <span class="section-tag__line"></span>
+          O ponto de partida
+        </p>
+        <h2 class="display reveal" id="identify-title">
+          Você não precisa continuar <em>carregando tudo sozinha.</em>
+        </h2>
         <div class="identify__cols">
           <div class="identify__text reveal">
             <p class="dropcap">Talvez você sinta que algo não está no lugar — sentimentos difíceis de nomear, inseguranças que se repetem, conflitos internos que pesam nas suas relações e nas suas escolhas.</p>
@@ -121,7 +218,31 @@
           </div>
           <div class="identify__text reveal reveal--delay">
             <p>Aqui, cada palavra tem espaço e tempo. Nada precisa ser resolvido na primeira sessão — nem explicado perfeitamente.</p>
-            <p>Olhar para a própria história com profundidade não é fraqueza. É o começo de uma outra relação com quem você é.</p>
+            <p>Olhar para a própria história com profundidade não é fraqueza. <strong>É o começo de uma outra relação com quem você é.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ NÚMEROS ══════════ -->
+    <section class="stats section">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal">
+            <span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span>
+            <p class="stat__label">Sigilo e confidencialidade</p>
+          </div>
+          <div class="stat reveal reveal--delay">
+            <span class="stat__num" data-count="3">0</span><span class="stat__suffix">áreas</span>
+            <p class="stat__label">de atuação integradas</p>
+          </div>
+          <div class="stat reveal reveal--delay2">
+            <span class="stat__num" data-count="1">0</span><span class="stat__suffix">×1</span>
+            <p class="stat__label">atendimento dedicado</p>
+          </div>
+          <div class="stat reveal reveal--delay3">
+            <span class="stat__num" data-count="24">0</span><span class="stat__suffix">h</span>
+            <p class="stat__label">para responder sua mensagem</p>
           </div>
         </div>
       </div>
@@ -132,11 +253,15 @@
       <div class="container">
         <div class="pillars__head">
           <div>
-            <p class="section-tag reveal">Atuação</p>
-            <h2 class="display reveal" id="pillars-title">Três caminhos, um mesmo compromisso: <em>você</em>.</h2>
+            <p class="section-tag reveal">
+              <span class="section-tag__line"></span>
+              Atuação
+            </p>
+            <h2 class="display reveal" id="pillars-title">Três caminhos, <em>um mesmo compromisso</em>: você.</h2>
           </div>
           <p class="pillars__intro reveal">Um espaço para mulheres que desejam compreender melhor a própria história e transformar a relação que têm consigo mesmas.</p>
         </div>
+
         <div class="pillars__grid">
           <article class="pillar reveal">
             <span class="pillar__num" aria-hidden="true">01</span>
@@ -145,7 +270,9 @@
             </span>
             <h3>Psicanálise</h3>
             <p>Um tempo só seu para falar, associar e olhar para o que até agora permaneceu silencioso — aprofundando as questões que atravessam sua vida emocional.</p>
+            <span class="pillar__arrow" aria-hidden="true">→</span>
           </article>
+
           <article class="pillar reveal reveal--delay">
             <span class="pillar__num" aria-hidden="true">02</span>
             <span class="pillar__icon" aria-hidden="true">
@@ -153,7 +280,9 @@
             </span>
             <h3>Mentoria</h3>
             <p>Acompanhamento próximo e dedicado ao processo pessoal de cada mulher, com direção clara e presença constante ao longo do caminho.</p>
+            <span class="pillar__arrow" aria-hidden="true">→</span>
           </article>
+
           <article class="pillar reveal reveal--delay2">
             <span class="pillar__num" aria-hidden="true">03</span>
             <span class="pillar__icon" aria-hidden="true">
@@ -161,6 +290,7 @@
             </span>
             <h3>Terapia das Emoções</h3>
             <p>Um convite a reconhecer, nomear e acolher as próprias emoções — sem julgamento, no ritmo de cada história.</p>
+            <span class="pillar__arrow" aria-hidden="true">→</span>
           </article>
         </div>
       </div>
@@ -168,10 +298,11 @@
 
     <!-- ══════════ CITAÇÃO ══════════ -->
     <section class="quote-band" aria-label="Citação de Sueli Boni">
+      <div class="quote-band__bg" aria-hidden="true"></div>
       <div class="container container--narrow">
         <blockquote class="quote reveal">
           <span class="quote__mark" aria-hidden="true">“</span>
-          <p>O que não tem nome não desaparece — apenas fala mais alto por outros caminhos. Nomear é o começo da liberdade.</p>
+          <p>O que não tem nome não desaparece — apenas fala mais alto por outros caminhos. <em>Nomear é o começo da liberdade.</em></p>
           <cite>Sueli Boni</cite>
         </blockquote>
       </div>
@@ -183,22 +314,51 @@
         <figure class="about__media reveal">
           <div class="about-art">
             <img class="about-art__img" src="assets/fotos/sueli-sobre.jpg" alt="Sueli Boni em sessão profissional" width="1000" height="1792" loading="lazy">
+            <div class="about-art__seal" aria-hidden="true">
+              <svg viewBox="0 0 200 200">
+                <defs>
+                  <path id="circlePath" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/>
+                </defs>
+                <text class="about-art__seal-text">
+                  <textPath href="#circlePath" startOffset="0">
+                    • SUELI BONI • PSICANÁLISE • MENTORIA •
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="about__signature">
+            <svg viewBox="0 0 120 40" fill="none">
+              <path d="M5 30 Q15 5, 25 25 T45 25 T65 25 T85 25 T105 25" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            </svg>
+            <span>Sueli Boni</span>
           </div>
         </figure>
+
         <div class="about__content">
-          <p class="section-tag reveal">Sobre</p>
+          <p class="section-tag reveal">
+            <span class="section-tag__line"></span>
+            Sobre
+          </p>
           <h2 class="reveal" id="about-title">Uma escuta que faz diferença</h2>
           <p class="about__role reveal">Psicanalista · Mentora · Terapeuta das Emoções</p>
+
           <div class="about__body reveal">
             <p>Sueli dedica seu trabalho ao universo feminino: mulheres que funcionam para todos, mas sentem que se perderam de si mesmas. Na intersecção entre psicanálise, mentoria e terapia das emoções, ela oferece um espaço onde cada história pode finalmente ser dita — e reescrita.</p>
-            <p>Mais do que entregar respostas, seu trabalho cria as condições para que cada mulher encontre as próprias. Sem pressa, sem julgamento, com profundidade.</p>
+            <p>Mais do que entregar respostas, seu trabalho cria as condições para que cada mulher encontre as próprias. <strong>Sem pressa, sem julgamento, com profundidade.</strong></p>
           </div>
+
           <ul class="about__values reveal">
             <li><span aria-hidden="true">✳</span> Escuta sem julgamento</li>
             <li><span aria-hidden="true">✳</span> Sigilo e confidencialidade</li>
             <li><span aria-hidden="true">✳</span> Ritmo de cada história</li>
+            <li><span aria-hidden="true">✳</span> Presença e acolhimento</li>
           </ul>
-          <!-- CONTEÚDO REAL: substituir/complementar com trajetória, formação e especializações fornecidas pela Sueli -->
+
+          <a class="btn btn--outline reveal" href="#contato" data-wa rel="noopener">
+            <span>Vamos conversar</span>
+            <svg class="btn__arrow" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -207,10 +367,16 @@
     <section class="how section" id="como-funciona" aria-labelledby="how-title">
       <div class="container">
         <div class="how__head">
-          <p class="section-tag reveal">Atendimento</p>
-          <h2 class="display reveal" id="how-title">O percurso, passo a passo</h2>
+          <div>
+            <p class="section-tag reveal">
+              <span class="section-tag__line"></span>
+              Atendimento
+            </p>
+            <h2 class="display reveal" id="how-title">O percurso, <em>passo a passo</em></h2>
+          </div>
           <p class="how__note reveal">Esta é uma visão inicial do caminho. O formato do trabalho se adapta à necessidade e ao momento de cada mulher.</p>
         </div>
+
         <ol class="steps">
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">01</span>
@@ -218,14 +384,18 @@
               <h3>Acolher</h3>
               <p>Um espaço seguro e confidencial para começar a falar sobre aquilo que você está vivendo — sem precisar ter todas as palavras prontas.</p>
             </div>
+            <div class="step__line" aria-hidden="true"></div>
           </li>
+
           <li class="step reveal reveal--delay">
             <span class="step__num" aria-hidden="true">02</span>
             <div class="step__body">
               <h3>Compreender</h3>
               <p>Olhar com profundidade para sentimentos, memórias e padrões — entendendo de onde vêm e como operam na sua vida hoje.</p>
             </div>
+            <div class="step__line" aria-hidden="true"></div>
           </li>
+
           <li class="step reveal reveal--delay2">
             <span class="step__num" aria-hidden="true">03</span>
             <div class="step__body">
@@ -241,51 +411,72 @@
     <section class="faq section" id="faq" aria-labelledby="faq-title">
       <div class="container faq__grid">
         <div class="faq__intro">
-          <p class="section-tag reveal">Dúvidas frequentes</p>
+          <p class="section-tag reveal">
+            <span class="section-tag__line"></span>
+            Dúvidas frequentes
+          </p>
           <h2 class="display reveal" id="faq-title">Antes de começar,<br><em>é natural perguntar.</em></h2>
           <p class="reveal">Se restar qualquer dúvida, é só me chamar — respondo pessoalmente.</p>
-          <a class="btn btn--outline reveal" data-wa href="#contato" rel="noopener">Tirar minha dúvida<span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--outline reveal" data-wa href="#contato" rel="noopener">
+            <span>Tirar minha dúvida</span>
+            <svg class="btn__arrow" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+
+          <div class="faq__intro-card reveal">
+            <div class="faq__intro-card-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <strong>Resposta em até 24h</strong>
+              <span>Atendimento pessoal e cuidadoso</span>
+            </div>
+          </div>
         </div>
+
         <div class="faq__list">
           <div class="faq-item reveal">
             <button class="faq-item__q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
-              Como funciona a primeira conversa?
+              <span>Como funciona a primeira conversa?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </button>
             <div class="faq-item__a" id="faq-a1" role="region" aria-labelledby="faq-q1">
               <p>O primeiro contato acontece por aqui mesmo, pelo WhatsApp. Conversamos sobre o que você está vivendo, eu explico como funciona o trabalho e vemos juntas o melhor caminho — sem compromisso.</p>
             </div>
           </div>
+
           <div class="faq-item reveal">
             <button class="faq-item__q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
-              Os atendimentos são online ou presenciais?
+              <span>Os atendimentos são online ou presenciais?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </button>
             <div class="faq-item__a" id="faq-a2" role="region" aria-labelledby="faq-q2">
               <p>O formato se adapta à sua rotina e ao momento que você vive. Você pode acompanhar de onde estiver, com a mesma qualidade de escuta e de cuidado.</p>
             </div>
           </div>
+
           <div class="faq-item reveal">
             <button class="faq-item__q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
-              Quanto tempo dura o processo?
+              <span>Quanto tempo dura o processo?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </button>
             <div class="faq-item__a" id="faq-a3" role="region" aria-labelledby="faq-q3">
               <p>Não existe prazo único: cada história tem seu ritmo. Algumas questões se movimentam rápido; outras pedem um percurso mais longo. O importante é que o processo respeite o seu tempo.</p>
             </div>
           </div>
+
           <div class="faq-item reveal">
             <button class="faq-item__q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
-              Preciso “estar mal” para fazer psicanálise?
+              <span>Preciso "estar mal" para fazer psicanálise?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </button>
             <div class="faq-item__a" id="faq-a4" role="region" aria-labelledby="faq-q4">
               <p>Não. Muitas mulheres chegam em busca de autoconhecimento, clareza ou de uma relação mais leve consigo mesmas. Não é preciso estar em crise para merecer escuta.</p>
             </div>
           </div>
+
           <div class="faq-item reveal">
             <button class="faq-item__q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
-              Tudo o que eu falar fica confidencial?
+              <span>Tudo o que eu falar fica confidencial?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </button>
             <div class="faq-item__a" id="faq-a5" role="region" aria-labelledby="faq-q5">
@@ -302,25 +493,84 @@
         <figure class="ig__media reveal">
           <div class="ig-card">
             <img src="assets/fotos/sueli-ig.jpg" alt="Sueli Boni em publicação no Instagram" width="1000" height="1792" loading="lazy">
-            <span class="ig-card__handle" aria-hidden="true">@sueli_psicanalista</span>
+            <div class="ig-card__overlay">
+              <span class="ig-card__handle">@sueli_psicanalista</span>
+              <div class="ig-card__cta">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38a3.72 3.72 0 01-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.92 5.92 0 00-2.13 1.38A5.92 5.92 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.92 5.92 0 001.38 2.13 5.92 5.92 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a6.18 6.18 0 003.51-3.51c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.92 5.92 0 00-1.38-2.13A5.92 5.92 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+                <span>Seguir</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ig__posts">
+            <div class="ig__post reveal">
+              <span class="ig__post-num">01</span>
+              <p>"O que não tem nome, fala por outros caminhos."</p>
+            </div>
+            <div class="ig__post reveal reveal--delay">
+              <span class="ig__post-num">02</span>
+              <p>Escutar é o primeiro gesto de presença.</p>
+            </div>
+            <div class="ig__post reveal reveal--delay2">
+              <span class="ig__post-num">03</span>
+              <p>Toda mulher carrega uma história que merece ser ouvida.</p>
+            </div>
           </div>
         </figure>
+
         <div class="ig__content">
-          <p class="section-tag reveal">Conteúdos</p>
-          <h2 class="display display--sm reveal" id="ig-title">Reflexões para compreender melhor a si mesma</h2>
+          <p class="section-tag reveal">
+            <span class="section-tag__line"></span>
+            Conteúdos
+          </p>
+          <h2 class="display display--sm reveal" id="ig-title">Reflexões para compreender melhor <em>a si mesma</em></h2>
           <p class="reveal">Acompanhe as reflexões publicadas por Sueli sobre vida emocional, autoconhecimento e processos de transformação.</p>
-          <a class="btn btn--primary reveal" href="https://instagram.com/sueli_psicanalista" target="_blank" rel="noopener">Seguir @sueli_psicanalista<span class="btn__arrow" aria-hidden="true">↗</span></a>
+
+          <div class="ig__stats reveal">
+            <div class="ig__stat">
+              <span class="ig__stat-num">+200</span>
+              <span class="ig__stat-label">reflexões</span>
+            </div>
+            <div class="ig__stat">
+              <span class="ig__stat-num">+5k</span>
+              <span class="ig__stat-label">mulheres</span>
+            </div>
+            <div class="ig__stat">
+              <span class="ig__stat-num">100%</span>
+              <span class="ig__stat-label">acolhimento</span>
+            </div>
+          </div>
+
+          <a class="btn btn--primary reveal" href="https://instagram.com/sueli_psicanalista" target="_blank" rel="noopener">
+            <span>Seguir @sueli_psicanalista</span>
+            <svg class="btn__arrow" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3l5 5-5 5M12 8H3"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- ══════════ CTA FINAL / CONTATO ══════════ -->
     <section class="final" id="contato" aria-labelledby="final-title">
+      <div class="final__bg" aria-hidden="true">
+        <div class="final__orb final__orb--1"></div>
+        <div class="final__orb final__orb--2"></div>
+      </div>
+
       <div class="container container--narrow center">
         <span class="final__star reveal" aria-hidden="true">✳</span>
         <h2 class="display reveal" id="final-title">Talvez o primeiro passo seja simplesmente <em>começar uma conversa.</em></h2>
         <p class="reveal">Se você se identificou com algo por aqui, este espaço foi feito para você. Fale comigo — sem compromisso, no seu tempo.</p>
-        <a class="btn btn--light btn--large reveal" data-wa href="#" rel="noopener">Falar com a Sueli<span class="btn__arrow" aria-hidden="true">→</span></a>
+
+        <div class="final__actions reveal">
+          <a class="btn btn--light btn--large" data-wa href="#" rel="noopener">
+            <span>Falar com a Sueli</span>
+            <svg class="btn__arrow" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a class="btn btn--ghost-light" href="https://instagram.com/sueli_psicanalista" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38a3.72 3.72 0 01-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.92 5.92 0 00-2.13 1.38A5.92 5.92 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.92 5.92 0 001.38 2.13 5.92 5.92 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a6.18 6.18 0 003.51-3.51c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.92 5.92 0 00-1.38-2.13A5.92 5.92 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+            <span>Instagram</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -330,32 +580,62 @@
     <div class="container footer__inner">
       <div class="footer__top">
         <div class="footer__col footer__col--brand">
-          <p class="footer__brand">Sueli Boni</p>
+          <a href="#topo" class="brand brand--footer">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="22.5" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M24 13l2.8 8.2L35 24l-8.2 2.8L24 35l-2.8-8.2L13 24l8.2-2.8z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand__name">Sueli Boni</span>
+          </a>
           <p class="footer__tagline">Um espaço de escuta para mulheres que decidem olhar para si com profundidade.</p>
+
+          <div class="footer__social">
+            <a href="https://instagram.com/sueli_psicanalista" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38a3.72 3.72 0 01-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.92 5.92 0 00-2.13 1.38A5.92 5.92 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.92 5.92 0 001.38 2.13 5.92 5.92 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a6.18 6.18 0 003.51-3.51c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.92 5.92 0 00-1.38-2.13A5.92 5.92 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+            </a>
+            <a data-wa href="#" aria-label="WhatsApp" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4s-1 .9-1 2.3 1 2.7 1.2 2.9c.2.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.4 2 11.8c0 2.1.6 4.1 1.6 5.8L2 22l4.4-1.4c1.7.9 3.6 1.4 5.6 1.4 5.5 0 10-4.4 10-9.8S17.5 2 12 2z"/></svg>
+            </a>
+          </div>
         </div>
+
         <nav class="footer__col" aria-label="Navegação do rodapé">
           <p class="footer__heading">Navegue</p>
           <a href="#sobre">Sobre</a>
           <a href="#atuacao">Atuação</a>
           <a href="#como-funciona">Como funciona</a>
           <a href="#faq">Dúvidas</a>
+          <a href="#conteudos">Conteúdos</a>
         </nav>
+
         <div class="footer__col">
           <p class="footer__heading">Fale comigo</p>
-          <a href="https://instagram.com/sueli_psicanalista" target="_blank" rel="noopener">Instagram · @sueli_psicanalista</a>
+          <a href="https://instagram.com/sueli_psicanalista" target="_blank" rel="noopener">@sueli_psicanalista</a>
           <a data-wa href="#">WhatsApp</a>
+          <a href="mailto:contato@sueliboni.com.br">contato@sueliboni.com.br</a>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__heading">Atendimento</p>
+          <p class="footer__info">Online para todo o Brasil</p>
+          <p class="footer__info">Segunda a sexta</p>
+          <p class="footer__info">Resposta em até 24h</p>
         </div>
       </div>
+
       <div class="footer__bottom">
         <p class="footer__copy">© <span id="year"></span> Sueli Boni. Todos os direitos reservados.</p>
-        <p class="footer__made" aria-hidden="true">✳</p>
+        <p class="footer__made" aria-hidden="true">✳ feito com presença</p>
       </div>
     </div>
   </footer>
 
   <!-- Botão flutuante WhatsApp -->
   <a class="wa-float" data-wa href="#" aria-label="Conversar no WhatsApp" rel="noopener">
-    <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4 1.6 6.2 1.6h.5c6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.7c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.3 1.4 1.4-4.1-.3-.4c-1.2-1.7-1.8-3.7-1.8-5.8C5.1 9 10 4.9 16 4.9s10.9 4.6 10.9 10.4-4.9 9.4-10.9 9.4zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.8-2c-.2-.5-.4-.4-.6-.4h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4 1.6 6.2 1.6h.5c6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.7c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.3 1.4 1.4-4.1-.3-.4c-1.2-1.7-1.8-3.7-1.8-5.8C5.1 9 10 4.9 16 4.9s10.9 4.6 10.9 10.4-4.9 9.4-10.9 9.4zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.8-2c-.2-.5-.4-.4-.6-.4h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+    <span class="wa-float__pulse" aria-hidden="true"></span>
   </a>
 
   <script src="js/main.js" defer></script>
