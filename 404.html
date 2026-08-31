@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Não encontrado · Sueli Boni</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0E1812">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: linear-gradient(180deg, #FAF6ED 0%, #F4ECDA 100%);
+      color: #1E2419;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .bg { position: absolute; inset: 0; pointer-events: none; }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: .4;
+    }
+    .orb--1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(176,133,78,.3), transparent 70%); top: -10%; right: -10%; }
+    .orb--2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(229,217,195,.6), transparent 70%); bottom: -10%; left: -10%; }
+    main { position: relative; z-index: 1; max-width: 540px; }
+    .star {
+      display: block;
+      font-size: 2rem;
+      color: #B0854E;
+      margin-bottom: 1.6rem;
+      animation: pulse 3s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: .6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 340;
+      font-size: clamp(3rem, 9vw, 5.5rem);
+      line-height: .95;
+      letter-spacing: -.025em;
+      margin-bottom: 1.2rem;
+      color: #1E2419;
+    }
+    h1 em { font-style: italic; color: #B0854E; }
+    p {
+      font-size: 1.05rem;
+      color: #6E6A5B;
+      margin-bottom: 2.4rem;
+    }
+    .actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: .7em;
+      font-size: .78rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase; padding: 1.1em 2.2em;
+      border-radius: 999px; text-decoration: none;
+      transition: transform .45s cubic-bezier(.22,.61,.36,1),
+                  background .45s, color .45s, box-shadow .45s;
+    }
+    .btn--primary { background: #0E1812; color: #F4EEE2; }
+    .btn--primary:hover { background: #B0854E; transform: translateY(-2px); box-shadow: 0 18px 38px -16px rgba(176,133,78,.55); }
+    .btn--outline { border: 1px solid #1E2419; color: #1E2419; }
+    .btn--outline:hover { background: #1E2419; color: #F4EEE2; transform: translateY(-2px); }
+    .sig {
+      margin-top: 3rem;
+      font-family: "Fraunces", Georgia, serif;
+      font-style: italic;
+      font-size: .95rem;
+      color: #99927E;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..600;1,300..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+  </div>
+
+  <main>
+    <span class="star" aria-hidden="true">✳</span>
+    <h1>Perdida no <em>silêncio.</em></h1>
+    <p>A página que você procura não existe — ou talvez ainda não tenha sido dita. Mas toda vez que nos perdemos, é também uma chance de nos reencontrar.</p>
+
+    <div class="actions">
+      <a class="btn btn--primary" href="/">
+        <span>Voltar ao início</span>
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--outline" href="https://wa.me/5521964565206?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20me%20perdi.%20Pode%20me%20ajudar%3F">
+        <span>Falar no WhatsApp</span>
+      </a>
+    </div>
+
+    <p class="sig">— com presença, Sueli Boni</p>
+  </main>
+</body>
+</html>

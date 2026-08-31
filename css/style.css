@@ -54,6 +54,30 @@
   box-sizing: border-box;
 }
 
+/* Skip link para acessibilidade (teclado) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--pine);
+  color: var(--ivory);
+  padding: .8em 1.4em;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: top .25s var(--ease);
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 96px;

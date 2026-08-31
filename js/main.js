@@ -244,8 +244,15 @@
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            navLinks.forEach((a) => a.classList.remove("is-active"));
-            byId.get(entry.target.id)?.classList.add("is-active");
+            navLinks.forEach((a) => {
+              a.classList.remove("is-active");
+              a.removeAttribute("aria-current");
+            });
+            const active = byId.get(entry.target.id);
+            if (active) {
+              active.classList.add("is-active");
+              active.setAttribute("aria-current", "page");
+            }
           }
         });
       },

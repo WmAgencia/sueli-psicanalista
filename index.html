@@ -55,6 +55,55 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como funciona a primeira conversa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O primeiro contato acontece pelo WhatsApp. Conversamos sobre o que você está vivendo, eu explico como funciona o trabalho e vemos juntas o melhor caminho — sem compromisso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Os atendimentos são online ou presenciais?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O formato se adapta à sua rotina. Você pode acompanhar de onde estiver, com a mesma qualidade de escuta e de cuidado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo dura o processo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não existe prazo único. Cada história tem seu ritmo. Algumas questões se movimentam rápido; outras pedem um percurso mais longo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tudo o que eu falar fica confidencial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, absolutamente. O que se passa no espaço terapêutico é sigiloso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é auriculoterapia e como funciona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A auriculoterapia é uma técnica terapêutica que utiliza pontos específicos da orelha — correspondentes a todos os órgãos e sistemas do corpo — para tratar desequilíbrios físicos, emocionais e energéticos."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -86,6 +135,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Skip link para acessibilidade -->
+  <a class="skip-link" href="#main">Pular para o conteúdo principal</a>
 
   <!-- Loader premium -->
   <div class="loader" id="loader" aria-hidden="true">
@@ -138,7 +190,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- ══════════ HERO �═════════ -->
     <section class="hero" aria-labelledby="hero-title">
