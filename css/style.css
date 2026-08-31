@@ -669,6 +669,7 @@ a { color: inherit; }
   height: 100%;
   object-fit: cover;
   object-position: center 18%;
+  filter: contrast(1.05) saturate(1.05);
 }
 
 .hero-art__frame::before {
@@ -1231,6 +1232,7 @@ a { color: inherit; }
   height: 100%;
   object-fit: cover;
   object-position: center 22%;
+  filter: contrast(1.05) saturate(1.05);
 }
 
 .about-art__seal {
@@ -1466,6 +1468,43 @@ a { color: inherit; }
 }
 
 .faq__intro-card span {
+  font-size: .78rem;
+  color: var(--muted);
+}
+
+.faq__september {
+  margin-top: 1rem;
+  padding: 1.4rem 1.6rem;
+  background: linear-gradient(135deg, rgba(229, 196, 116, .12), rgba(229, 196, 116, .04));
+  border: 1px solid color-mix(in srgb, var(--brass-soft) 35%, transparent);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.faq__september-flag {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F4D35E, #EEB422);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  flex: none;
+  box-shadow: 0 4px 14px -4px rgba(238, 180, 34, .4);
+}
+
+.faq__september strong {
+  display: block;
+  font-size: .95rem;
+  margin-bottom: .2rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.faq__september span {
   font-size: .78rem;
   color: var(--muted);
 }
