@@ -1,2 +1,8 @@
 .vercel
-.env.local\n.env*.local\nREPORT.md\n*.zip
+.env.local
+.env*.local
+REPORT.md
+*.zip
+node_modules
+.DS_Store
+Thumbs.db
