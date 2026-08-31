@@ -1992,6 +1992,18 @@ a { color: inherit; }
   color: color-mix(in srgb, var(--ivory) 55%, transparent);
 }
 
+.footer__privacy {
+  font-size: .72rem;
+  color: color-mix(in srgb, var(--ivory) 70%, transparent);
+  text-decoration: none;
+  letter-spacing: .04em;
+  transition: color .35s var(--ease);
+}
+
+.footer__privacy:hover {
+  color: var(--brass-soft);
+}
+
 .footer__made {
   color: var(--brass);
   font-size: .82rem;
