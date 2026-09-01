@@ -311,7 +311,7 @@ h3 {
 }
 
 .display { font-size: clamp(1.95rem, 4.6vw, 3.4rem); }
-.display em { font-style: italic; color: var(--brass); }
+.display em { font-style: italic; color: var(--brass); font-weight: 400; }
 .display--sm { font-size: clamp(1.65rem, 3.6vw, 2.5rem); }
 
 p { color: var(--ink-2); }
@@ -1193,7 +1193,7 @@ a { color: inherit; }
 }
 
 .quote p em {
-  color: var(--brass-soft);
+  color: #F0D4A0;
   font-weight: 400;
 }
 
@@ -1934,7 +1934,12 @@ a { color: inherit; }
   z-index: 2;
 }
 
-.final .display em { font-style: italic; color: var(--brass-soft); }
+.final .display em {
+  font-style: italic;
+  color: #F0D4A0;
+  font-weight: 400;
+  text-shadow: 0 0 40px color-mix(in srgb, var(--brass-soft) 50%, transparent);
+}
 
 .final p:not(.final__star) {
   color: color-mix(in srgb, var(--ivory) 76%, transparent);
