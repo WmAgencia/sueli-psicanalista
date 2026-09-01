@@ -493,7 +493,7 @@ a { color: inherit; }
 /* ══════════ HERO ══════════ */
 .hero {
   position: relative;
-  padding-top: calc(80px + clamp(4rem, 9vw, 7rem));
+  padding-top: clamp(1.5rem, 4vw, 3rem);
   padding-bottom: clamp(4rem, 8vw, 7rem);
   overflow: hidden;
   background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
@@ -2295,7 +2295,7 @@ a { color: inherit; }
   }
   .nav.is-open a::after { display: none; }
 
-  .hero { padding-top: calc(70px + 3.4rem); }
+  .hero { padding-top: clamp(1rem, 3vw, 1.6rem); }
   .hero__actions { flex-direction: column; width: 100%; }
   .hero__actions .btn { width: 100%; }
   .hero__scroll { display: none; }
