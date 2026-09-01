@@ -711,29 +711,6 @@ a { color: inherit; }
     linear-gradient(180deg, rgba(14, 24, 18, .28) 0%, transparent 26%, transparent 62%, rgba(14, 24, 18, .42) 100%);
 }
 
-.hero-art__rings {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.rings-slow {
-  transform-box: view-box;
-  transform-origin: 200px 330px;
-  animation: spin 90s linear infinite;
-}
-
-.rings-dash {
-  transform-box: view-box;
-  transform-origin: 200px 330px;
-  animation: spin 60s linear infinite reverse;
-}
-
-@keyframes spin { to { transform: rotate(360deg); } }
-
 .hero-art__badges {
   position: absolute;
   inset: 0;
@@ -746,8 +723,7 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  background: rgba(244, 238, 226, .95);
-  backdrop-filter: blur(12px);
+  background: var(--ivory);
   padding: .55em 1.1em;
   border-radius: 999px;
   font-size: .72rem;
@@ -755,7 +731,7 @@ a { color: inherit; }
   letter-spacing: .08em;
   color: var(--pine);
   box-shadow: var(--shadow-md);
-  animation: floatBadge 6s ease-in-out infinite;
+  white-space: nowrap;
 }
 
 .hero-art__badge-dot {
@@ -766,20 +742,23 @@ a { color: inherit; }
 }
 
 .hero-art__badge--1 {
-  top: 12%;
-  left: -8%;
+  top: 8%;
+  left: -22%;
+  animation: floatBadge 6s ease-in-out infinite;
   animation-delay: -2s;
 }
 
 .hero-art__badge--2 {
-  top: 45%;
-  right: -10%;
+  top: 48%;
+  right: -28%;
+  animation: floatBadge 6s ease-in-out infinite;
   animation-delay: -4s;
 }
 
 .hero-art__badge--3 {
-  bottom: 18%;
-  left: -6%;
+  bottom: 6%;
+  left: -20%;
+  animation: floatBadge 6s ease-in-out infinite;
   animation-delay: -1s;
 }
 
@@ -2262,6 +2241,10 @@ a { color: inherit; }
 
   .hero__name br { display: none; }
 
+  .hero-art__badge {
+    font-size: .65rem;
+    padding: .5em .9em;
+  }
   .hero-art__badge--1 { left: -4%; }
   .hero-art__badge--2 { right: -4%; }
   .hero-art__badge--3 { left: -2%; }
