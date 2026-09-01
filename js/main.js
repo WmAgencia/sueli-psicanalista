@@ -381,6 +381,34 @@
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
+  /* ── Back to top button ── */
+  function initBackToTop() {
+    const btn = document.getElementById("backToTop");
+    if (!btn) return;
+    let ticking = false;
+    const onScroll = () => {
+      btn.classList.toggle("is-visible", window.scrollY > 800);
+      ticking = false;
+    };
+    onScroll();
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+    btn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
+    });
+  }
+
   /* ── Service Worker (PWA) ── */
   function initServiceWorker() {
     if (!("serviceWorker" in navigator)) return;
@@ -409,6 +437,7 @@
     initSmoothScroll();
     setYear();
     initServiceWorker();
+    initBackToTop();
   }
 
   if (document.readyState === "loading") {

@@ -2062,6 +2062,19 @@ a { color: inherit; }
   font-style: italic;
 }
 
+.footer__privacy {
+  font-size: .78rem;
+  color: color-mix(in srgb, var(--ivory) 55%, transparent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .35s var(--ease), border-color .35s var(--ease);
+}
+
+.footer__privacy:hover {
+  color: var(--brass-soft);
+  border-color: var(--brass);
+}
+
 /* ══════════ WHATSAPP FLUTUANTE ══════════ */
 .wa-float {
   position: fixed;
@@ -2111,6 +2124,45 @@ a { color: inherit; }
 .wa-float:hover {
   transform: translateY(-4px) scale(1.05);
   background: var(--brass);
+}
+
+/* ══════════ BACK TO TOP ══════════ */
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 6.5rem;
+  z-index: 89;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ivory);
+  color: var(--pine);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .4s var(--ease),
+              visibility .4s var(--ease),
+              transform .4s var(--ease),
+              background .35s var(--ease),
+              border-color .35s var(--ease);
+  box-shadow: var(--shadow-sm);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--pine);
+  color: var(--ivory);
+  border-color: var(--pine);
+  transform: translateY(-2px);
 }
 
 /* ══════════ REVEAL ON SCROLL ══════════ */
@@ -2243,6 +2295,7 @@ a { color: inherit; }
 
   .footer__top { grid-template-columns: 1fr; }
   .footer__bottom { flex-direction: column; gap: .4rem; text-align: center; }
+  .footer__bottom > * { margin: 0; }
 
   .about__credentials {
     flex-direction: column;
@@ -2265,5 +2318,6 @@ a { color: inherit; }
   .display { font-size: 1.85rem; }
   .quote p { font-size: 1.35rem; }
   .wa-float { right: 1.1rem; bottom: 1.1rem; width: 54px; height: 54px; }
+  .back-to-top { right: 1.1rem; bottom: 5.7rem; width: 40px; height: 40px; }
   .hero__trust { gap: 1rem; font-size: .72rem; }
 }
