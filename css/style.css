@@ -135,8 +135,12 @@ svg {
   background: var(--line);
   border-radius: 99px;
   border: 2px solid var(--paper);
+  transition: background .35s var(--ease);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--brass); }
+
+/* Smooth scrollbar para Firefox */
+* { scrollbar-width: thin; scrollbar-color: var(--line) var(--paper); }
 
 .sr-only {
   position: absolute;
@@ -2030,6 +2034,17 @@ a { color: inherit; }
   margin: 0;
 }
 
+.footer__value {
+  color: color-mix(in srgb, var(--ivory) 75%, transparent);
+  font-size: .86rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: .55em;
+}
+
+.footer__value span { color: var(--brass); }
+
 .footer__bottom {
   display: flex;
   align-items: center;
@@ -2237,7 +2252,7 @@ a { color: inherit; }
   .pillars__grid { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
   .topics__grid { grid-template-columns: 1fr; }
   .faq__intro { position: static; }
-  .footer__top { grid-template-columns: 1fr 1fr; gap: 2.2rem; }
+  .footer__top { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2.2rem; }
   .footer__col--brand { grid-column: 1 / -1; }
 
   .hero__name br { display: none; }
