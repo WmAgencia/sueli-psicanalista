@@ -2006,11 +2006,18 @@ a { color: inherit; }
   z-index: 2;
 }
 
-.final .display em {
+.final .display em,
+.final h2 em,
+section.final em {
   font-style: italic;
-  color: #F0D4A0;
+  color: #F0D4A0 !important;
   font-weight: 400;
   text-shadow: 0 0 40px color-mix(in srgb, var(--brass-soft) 50%, transparent);
+  background: linear-gradient(135deg, #F0D4A0 0%, #D4A574 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 .05em;
 }
 
 .final p:not(.final__star) {
